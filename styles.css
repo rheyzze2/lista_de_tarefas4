@@ -1,0 +1,170 @@
+/* IMPORTAÇÃO DE FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* VARIÁVEIS CSS */
+:root {
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #f4f8fb;
+  --cor-destaque: #005999;
+  --cor-fundo-section: #fafdff;
+  --cor-footer: #222;
+  --cor-texto: #222;
+  --cor-nav: #e3e3e3;
+  --fonte-principal: "Open Sans", Arial, sans-serif;
+}
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background: var(--cor-secundaria);
+  color: var(--cor-texto);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  background: var(--cor-primaria);
+  color: white;
+  padding: 24px 0 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+header img {
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 8px;
+  transition: transform 0.3s;
+}
+header img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #e3e3e3;
+  margin-top: 4px;
+}
+
+/* NAVEGAÇÃO */
+nav {
+  background: var(--cor-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  margin-bottom: 24px;
+}
+
+nav a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+nav a:hover {
+  color: #fff;
+  background: var(--cor-primaria);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  padding: 28px 28px 18px 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+section,
+article {
+  margin-bottom: 22px;
+  border-left: 4px solid var(--cor-primaria);
+  padding-left: 16px;
+  background: var(--cor-fundo-section);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background: var(--cor-primaria);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+article::after {
+  content: "★";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--cor-primaria);
+  font-size: 1.5rem;
+  opacity: 0.15;
+}
+
+h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: var(--cor-destaque);
+  margin-bottom: 6px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+/* ASIDE (REDES SOCIAIS) */
+aside {
+  max-width: 650px;
+  margin: 24px auto;
+  background: var(--cor-nav);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: var(--cor-footer);
+  color: white;
+  padding: 12px 0;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+  main,
+  aside {
+    padding: 10px;
+  }
+  header {
+    padding: 12px 0 8px 0;
+  }
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
